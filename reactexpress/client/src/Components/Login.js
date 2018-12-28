@@ -6,13 +6,22 @@ class Login extends Component {
 constructor(){
     super();
     this.state={
-        eMail : '',
-        passWord : '',
+        name : '',
+        email : '',
+        password : '',
+        password2 : '',
+        errors : {}
     }
 }
 onSubmit(e){
     e.preventDefault();
-    alert("Authenticating user");
+    const newUser = {
+        name : this.state.name,
+        email : this.state.email,
+        password : this.state.password,
+        password2 : this.state.password2
+    };
+    /*alert("Authenticating user");
     fetch('/server.js', {
         method : 'POST',
         body : JSON.Stringify(this.state),
@@ -30,7 +39,7 @@ onSubmit(e){
     })
     .catch(err => {
         console.error(err);
-    })
+    })*/
 }
 onChange(e){
     this.setState({
@@ -39,6 +48,8 @@ onChange(e){
     console.log(this.state.eMail);
 }
   render() {
+
+        const { errors } = this.state;
     return (
       <div className="Login">
         <form>

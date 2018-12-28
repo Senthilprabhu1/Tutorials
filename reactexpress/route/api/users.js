@@ -44,6 +44,10 @@ router.post('/register', (req, res) => {
                     .catch(err => console.log(err));
             });
         });
+        res.send(
+            `I received your POST request. This is what you sent me: `,
+          );
+          console.log("Received frm registration");
     });
 
 });
@@ -89,7 +93,7 @@ router.post('/login', (req,res) => {
     
 });
 
-router.get('/currentuser', passport.authenticate("jwt", { sesssion : false }), (req,res) => {
+router.get('/currentuser', passport.authenticate("jwt", { session : false }), (req,res) => {
     res.json({
         id : req.user.id,
         name : req.user.name,

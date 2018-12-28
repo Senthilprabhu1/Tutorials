@@ -1,7 +1,33 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
 .App {
   text-align: center;
 }
-
+.Registration {
+  text-align: center;
+  
+}
+.login{
+  text-align: right;
+}
+h1{
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+.btn-block {
+  display: block;
+  width: 20%;
+  height: 20%;
+  justify-items: center;
+}
+.btn-lg, .btn-group-lg > .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+    border-radius: 0.27rem;
+}   
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
@@ -11,12 +37,31 @@
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: center;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
+[type="checkbox"], [type="radio"] 
+{
+box-sizing: border-box;
+    padding: 0;
+}
+input, button, select, textarea {
+    line-height: inherit;
+}
+a, area, button, [role="button"], input, label, select, summary, textarea {
+    touch-action: manipulation;
+}
+button, input {
+    overflow: visible;
+}
+button, input, optgroup, select, textarea {
+    font: inherit;
+    margin: 0;
+}
+
 
 .App-link {
   color: #61dafb;
@@ -29,4 +74,86 @@
   to {
     transform: rotate(360deg);
   }
+}
+.logincontent{
+  padding-top: 3%;
+    padding-bottom: 3%;
+    margin-top: 7rem;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.forget{
+  text-align: right;
+}
+.acc{
+  text-align: right;
+  
+}
+.rec{
+  text-align: left;
+  padding-right: 4rem;
+  padding-top: 1rem;
+}
+.login{
+
+  padding: 0.5rem 1.8rem;
+}
+
+.checkbox{
+  padding-right: 5rem;
+}
+.loginlink{
+  padding-left: 5px;
+}
+
+
+
+#sidebar.active {
+  min-width: 80px;
+  max-width: 80px;
+  text-align: center;
+}
+
+/* Toggling the sidebar header content, hide the big heading [h3] and showing the small heading [strong] and vice versa*/
+#sidebar .sidebar-header strong {
+  display: none;
+}
+#sidebar.active .sidebar-header h3 {
+  display: none;
+}
+#sidebar.active .sidebar-header strong {
+  display: block;
+}
+
+#sidebar ul li a {
+  text-align: left;
+}
+
+#sidebar.active ul li a {
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 0.85em;
+}
+
+#sidebar.active ul li a i {
+  margin-right:  0;
+  display: block;
+  font-size: 1.8em;
+  margin-bottom: 5px;
+}
+
+/* Same dropdown links padding*/
+#sidebar.active ul ul a {
+  padding: 10px !important;
+}
+
+/* Changing the arrow position to bottom center position, 
+ translateX(50%) works with right: 50% 
+ to accurately  center the arrow */
+#sidebar.active .dropdown-toggle::after {
+  top: auto;
+  bottom: 10px;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  transform: translateX(50%);
 }
